@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mi app</title>
+</head>
+<body>
+
+	<h1>Inicia sesiòn</h1>
+	<button id="login">inicia con google</button>
+	<div id="root"></div>
+	<button id="guardar">Guardar</button>
+<!--liga de jquery va primero que firebase-->
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">	
+</script>
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+<!--referencias de proyecto firebase-->
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA9jKl1BOzJbSzYWqtpXpsqD3Me28aoHbw",
+    authDomain: "sprint1log-in.firebaseapp.com",
+    databaseURL: "https://sprint1log-in.firebaseio.com",
+    projectId: "sprint1log-in",
+    storageBucket: "sprint1log-in.appspot.com",
+    messagingSenderId: "717612769256"
+  };
+  firebase.initializeApp(config);
+</script>
+<script type="text/javascript" src= "data.js"></script>
+</body>
+</html>
