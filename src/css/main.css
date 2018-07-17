@@ -1,4 +1,4 @@
-body {
+#animated-background {
   width: 100%;
   height: 100%;
   background-image: url('../images/fondo2.png');
@@ -23,7 +23,7 @@ body {
   text-align: right;
 }
 #sesion {
-  margin: 5% 5% 0 0;
+  margin: 2% 5% 0 0;
 }
 .logo {
   border-radius: 100%;
@@ -71,4 +71,39 @@ strong {
 }
 @media only screen and (max-width: 900px) {
 
+}
+
+/* Seccion de comentarios */
+.header-fixed {
+  background: #840899;
+  color: #fff;
+}
+.header-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+.header-block {
+  display: inline-block;
+  vertical-align: middle;
+  width: 49%;
+  padding: 0 15px;
+}
+#logo-fixed {
+  width: 55px;
+  background: #fff;
+  border-radius: 100%;
+  margin: 10px 0;
+}
+#brand {
+  font-size: 30px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+#usuario {
+  text-align: right;
+}
+#coments-card {
+  margin: 15px 0;
+  padding: 10px;
 }

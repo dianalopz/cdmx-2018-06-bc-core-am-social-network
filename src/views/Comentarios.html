@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Inicio</title>
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="../css/main.css" />
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Yanone+Kaffeesatz" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+  </head>
+  <body>
+    <header class="header-fixed">
+      <div class="container">
+        <div class="header-block">
+          <img id="logo-fixed" src="../images/logo.png" alt="Petips">
+          <strong id="brand">Petips</strong>
+        </div>
+        <div class="header-block" id="usuario">
+          <h4>Hola Diana</h4>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="col-8">
+          <div class="card">
+            <div class="card-header">
+              <h5>¿Como esta tu mascota hoy?</h5>
+            </div>
+            <div class="card-body">
+              <textarea id="myTextarea" class="form-control" aria-label="With textarea"></textarea> <br>
+              <button class="btn btn-primary" onclick="myFunction()">Publicar</button>
+            </div>
+          </div>
+          <div class="coments">
+            <div class="card" id="coments-card">
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <h5>Mis mascotas:</h5>
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="../images/pet.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><strong id="brand">Miley</strong></h5>
+              <ul>
+                <li>Perro</li>
+                <li>French Poodle</li>
+                <li>Hembra</li>
+                <li>5 meses</li>
+              </ul>
+              <a href="#" class="btn btn-primary">Enviar solicitud de amistad</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../js/index.js"></script>
+  </body>
+</html>
