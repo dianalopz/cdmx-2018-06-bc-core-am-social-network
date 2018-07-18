@@ -103,12 +103,6 @@ strong {
 #usuario {
   text-align: right;
 }
-#user{
-  display:none;
-}
-#btnred{
-  display: none;
-}
 #coments-card {
   margin: 15px 0;
   padding: 10px;

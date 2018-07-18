@@ -36,7 +36,6 @@ const pass = txtPassword.value;
 const auth = firebase.auth();
 user.style.display = "block";
 btnLogin.style.display = "none";
-redirecciona();
 // entrar
 const promise = auth.createUserWithEmailAndPassword(email,pass);
 promise
