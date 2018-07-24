@@ -67,21 +67,22 @@ window.open('https://dianalopz.github.io/cdmx-2018-06-bc-core-am-social-network/
 	 
 }());
 
-
-
 //login autenticacion con google
-//var provider = new firebase.auth.GoogleAuthProvider();
+var provider = new firebase.auth.GoogleAuthProvider();
 //pegamos 1er linea del paso 5 firebase
+//firebase.auth().getRedirectResult().then(function(result) {
 //con jquery 
-//$('#login').click(function(){
-	//firebase.auth()
-	//.signInWithPopup(provider)
-	//.then(function(res){
-		//console.log(res.user);
-		//guardaDatos(res.user);
+$('#btnLoginGoogle').click(function(){
+	firebase.auth()
+	.signInWithPopup(provider)
+	.then(function(result){
+		console.log(result.user);
+		//guardaDatos(result.user);
 		//$('#login').hide();
 		//$('#root').append("<img src='"+res.user.photoURL+"'/>")
-	//});
+	});
+});
+//});
 ////guardar los datos automaticamente
 //function guardaDatos(user){
 	//let usuario = {
