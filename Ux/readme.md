@@ -45,10 +45,10 @@ tips de cuidado, y tutoriales para crear accesorios para las mascotas con objeto
   Se tomo la decisión después de  realizar una encuesta online para conocer la usabilidad de las redes sociales dedicadas a mascotas y  se obtuvieron los siguientes resultados:
   
   ##Encuesta: 
-  ![Encuesta en Typeform](https://samantha589.typeform.com/to/gY7n0S)
+  [Encuesta en Typeform](https://samantha589.typeform.com/to/gY7n0S)
   
   ## Resultados 
-![¿Te unirias a una Red Social para mascotas?](/Ux/img/Recuento de ¿Conoces una red social dedicada a las mascotas_.png)
+![¿Te unirias a una Red Social para mascotas?](https://github.com/samglvn/cdmx-2018-06-bc-core-am-social-network/blob/master/Ux/img/Recuento%20de%20%C2%BFConoces%20una%20red%20social%20dedicada%20a%20las%20mascotas_.png)
 
 Cabe mencionar que los usuarios no conocen redes sociales para mascotas pero tienen
  un interes bastante considerable para formar parte de alguna.
@@ -71,7 +71,7 @@ En una estimación de la misma AMASCOTA, de 26 millones de mascotas que hay en M
 
 Actualmente uno de cada 10 perros tiene perfil de facebook, conforme a incrementado la cultura de la redes sociales las mascotas se han empoderado en ellas, siendo la cantidad de likes otorgadas a  sus fotos la principal razón por la que sus dueños exhiben sus encantos.
 
- ![¿Que tan importante es tu mascota?](/Ux/img/Recuento de Que tan importante es tu mascota en tu vida.png)
+ ![¿Que tan importante es tu mascota?](https://github.com/samglvn/cdmx-2018-06-bc-core-am-social-network/blob/master/Ux/img/Recuento%20de%20Que%20tan%20importante%20es%20tu%20mascota%20en%20tu%20vida.png)
 
 #### 📊 Benchmark:
  Se realizó un primer benchmark a web sites con temáticas de mascotas y áreas relacionadas:
@@ -81,20 +81,19 @@ Actualmente uno de cada 10 perros tiene perfil de facebook, conforme a increment
 
 Se dice que un ocho por ciento de los lugares de trabajo de Estados Unidos permiten a los empleados llevar a sus mascotas a la oficina, que es hasta un 5 por ciento desde de 2013. Algunas de ellas son: Amazon, Ben & Jerry, Google, Clif Bar, Build-A-Bear, Petco y Etsy, entre otros.
 
-##### 💻 Acerca de nuestrxs usuarixs
+#### 💻 Acerca de nuestrxs usuarixs
 
 * Usuarixs interesadxs en el desarrollo pleno de su mascota.
 * Tienen interés por realizar actividades colectivas en pro de las mascotas. 
 * Están interesadxs en compartir experiencias acerca de su mascota, así como en resolver dudas 
   y contribuir en una comunidad de usuarix dentro del mundo tech enfocado a las mascotas.
 
-##### Objetivo de lxs usuarixs
+#### 🚦 Objetivo de lxs usuarixs
 
   Formar parte de una red social  que tenga una comunidad que 
-  genere conocimientos en conjunto sobre cuidados para las mascotas, así como para  
-  encontrar medicoa veterinarios recomendables y nuevas oportunidades de convivencia y recreación junto a su mascota.
+  genere conocimientos en conjunto sobre cuidados para las mascotas, así como para encontrar medicoa veterinarios recomendables y nuevas oportunidades de convivencia y recreación junto a su mascota.
 
-#####  Puntos de dolor del Usuario: 
+##### 🤪 Puntos de dolor del Usuario: 
   
   * Dificultad al encontrar medicos veterinarios que se desempeñen favorablemente
   en su área de trabajo.
@@ -102,9 +101,9 @@ Se dice que un ocho por ciento de los lugares de trabajo de Estados Unidos permi
   * No hay una red social enfocada a mascotas que realmente los cautive para pertenecer
   a ella. 
 
-  ![Problemas a los que se enfrentan](/Ux/img/Recuento de De los siguientes problemas, con cuales te  enfrentas mas seguido junto a tu mascota)
+  ![Problemas a los que se enfrentan](https://github.com/samglvn/cdmx-2018-06-bc-core-am-social-network/blob/master/Ux/img/Recuento%20de%20De%20los%20siguientes%20problemas%2C%20con%20cuales%20te%20%20enfrentas%20mas%20seguido%20junto%20a%20tu%20mascota.png)
 
-#####  Sentimientos:
+#### 🎭 Sentimientos:
 
   * Desinformación. 
   * Apatía
@@ -114,15 +113,16 @@ Se dice que un ocho por ciento de los lugares de trabajo de Estados Unidos permi
 
 #### Ideación:
 
-## Prototipos:
-![Prototipo movil en figma](https://www.figma.com/file/QkXjafPWU8pb6pcdYCnyHwHL/Petips-movil?node-id=0%3A1)
-![Prototipo Desktop en figma](https://www.figma.com/file/gzEIVRrYk6tj85sLfYsKd4SQ/Petips-Desktop?node-id=0%3A1)
-##  Sketches
+#### 📱 Prototipos:
+[Prototipo movil en figma](https://www.figma.com/file/QkXjafPWU8pb6pcdYCnyHwHL/Petips-movil?node-id=0%3A1)
+[Prototipo Desktop en figma](https://www.figma.com/file/gzEIVRrYk6tj85sLfYsKd4SQ/Petips-Desktop?node-id=0%3A1)
+
+####  Sketches
 
 
-##  Logo y paleta de colores
+#### 🖼 Logo y paleta de colores
 
-![Petips](https://www.figma.com/file/FPcywtzVJ4IUG0i7xVTbKjOS/Untitled?node-id=0%3A1)
+[Petips](https://www.figma.com/file/FPcywtzVJ4IUG0i7xVTbKjOS/Untitled?node-id=0%3A1)
 
 
-#### 🎨Argumentación de Diseño:
+#### 🎨 Argumentación de Diseño:
