@@ -1,15 +1,4 @@
-window.funciones={
-  inputNotEmpty: (str) => {
-    if(str.length !==0)
-    return true;
-    else {
-      return false;
-    }
-  },
-
-};
-module.exports=funciones;
-
+//Comentarios
 function myFunction () {
   const comentario = document.getElementById("myTextarea").value;
   const lugaraimprimir = document.getElementById("coments-card");
