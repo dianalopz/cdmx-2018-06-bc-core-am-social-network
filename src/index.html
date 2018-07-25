@@ -7,23 +7,6 @@
   <link rel="stylesheet" href="../src/css/main.css">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Lobster|Yanone+Kaffeesatz" rel="stylesheet">
-  <!--jQuery--->
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous">
-  </script>
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-  <!--autenticacion con google-->
- <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
-  <title>Login</title>
-</head>
-  <body  id="animated-background">
-	 <div class="container-details">
-		
-    <button id="btnred" class="btn btn-lg btn-dark" type="submit">Iniciar sesión</button>
-    
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
 </head>
@@ -80,17 +63,6 @@
 			<div class="logo">
         <img src="images/logo.png" alt="Petips">
       </div>
-      <h1 class="h3 mb-3 font-weight-normal">Bienvenido a <strong>Petips</strong></h1>
-      <p>¡Registrate! Estas a un paso de pertenecer a la comunidad <strong>pet lover</strong> más grande e impresionante</p>
-      <input id="txtEmail" type="email" class="form-control" placeholder="Email" required="" autofocus=""><br>
-      <input type="password" id="txtPassword" class="form-control" placeholder="Contraseña" required=""><br>
-      <button id="btnSignUp" class="btn btn-secondary">Registrarse</button><br>
-      <button id="btnLogin" class="btn btn-lg btn-dark" type="submit">Iniciar sesión</button><br>
-      <button id="btnLogout" class="btn btn-action hide" type="submit">Salir</button><br>
-			<button id="btnLoginGoogle" class="btn btn-secondary">Inicia con google</button>
-      <div id="user"></div>
-			<div id="root"></div>
-      <p class="mt-5 mb-3 text-muted">© Yuji-Coders ♥ 2018</p>
       <h1 class="h3 mb-3 font-weight-normal">¡Hola de nuevo!</h1>
       <h4><strong>Inicia sesión</strong></h4>
 			<p>¿Cómo esta tu mascota hoy?</p>
@@ -109,28 +81,14 @@
       </div>
     </div>
   </div>
- <script>
-   // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyA3pDBsY2QsTHk1B3AsrOaqxlRQ5tAUNIk",
-    authDomain: "redsocial-d4eaa.firebaseapp.com",
-    databaseURL: "https://redsocial-d4eaa.firebaseio.com",
-    projectId: "redsocial-d4eaa",
-    storageBucket: "redsocial-d4eaa.appspot.com",
-    messagingSenderId: "426801590412"
-  };
-  firebase.initializeApp(config);
-   
- </script>
-
- <script type="text/javascript" src="data.js"></script>
- <script type="text/javascript" src="../views/Comentarios.html"></script>
 	<!-- Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
 	<!-- Conexion firebase -->
 	<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
 	<!-- JS local -->
   <script type="text/javascript" src= "js/data.js"></script>
 </body>
