@@ -116,3 +116,49 @@ strong {
   margin: 15px 0;
   padding: 10px;
 }
+/* New Coment */
+label[for='new-task'] {
+  display: block;
+  margin: 0 0 20px;
+}
+input#myTextarea {
+  float: left;
+  width: 318px;
+}
+/* Coment list */
+ul{
+  overflow: hidden;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+ul> input[type="checkbox"] {
+  margin: 0 10px;
+  position: relative;
+  top: 15px;
+}
+ul> label {
+  font-size: 18px;
+  line-height: 40px;
+  width: 237px;
+  padding: 0 0 0 11px;
+}
+
+input[type="text"] {
+  width: 226px;
+}
+ul.delete:hover {
+  color: #CF2323;
+}
+
+/* Edit Coment */
+input[type=text] {
+  display:none;
+}
+
+ul.editMode input[type=text] {
+  display:block;
+}
+
+ul.editMode label {
+  display:none;
+}
