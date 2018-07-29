@@ -1,25 +1,24 @@
-//Comentarios
-//function myFunction () {
- // const comentario = document.getElementById("myTextarea").value;
-  //const lugaraimprimir = document.getElementById("coments-card");
-  //const nuevocoment = document.createElement('p');
-  //nuevocoment.innerHTML = comentario;
-  //lugaraimprimir.appendChild(nuevocoment);
-//}
+//Agregando configuracion de firebase en js actual
+window.petips.firebase();
+
+//Cerrar sesión
+btnLogout.addEventListener('click', e => {
+  window.petips.signOut();
+});
 
 //nuevo comentario
-const comentario = document.getElementById("myTextarea"); 
+const comentario = document.getElementById("myTextarea");
 //boton publicar
-const buttonPublicar = document.getElementsByTagName("button")[0]; 
+const buttonPublicar = document.getElementsByTagName("button")[0];
 //seccion donde se van acumulando los comentarios
-const muro = document.getElementById("coments-card"); 
+const muro = document.getElementById("coments-card");
 //crear nuevo comentario
 const createNewComent = (comentString) => {
 //crear nuevo elemento
 const listComents = document.createElement("ul");
   let label = document.createElement("label");
   //crear area para editar comentario
-  let editInput = document.createElement("input"); 
+  let editInput = document.createElement("input");
   //crear boton para editar comentario
   let editButton = document.createElement("button");
   //crear boton para eliminar comentario
@@ -54,7 +53,7 @@ let publicar = function() {
 guardarCambios(listComents);
   comentario.value = "";
 }
-//Editar comentario 
+//Editar comentario
 let editarComentario = function() {
   //se añade el elemento de la lista de taresas a taresa completadas
   let listComents = this.parentNode;
@@ -75,7 +74,7 @@ let editarComentario = function() {
     editInput.value = label.innerText;
     editButton.innerText = "save";
   }
-  
+
 // Alternar .editMode en el padre
   listComents.classList.toggle("editMode");
 }
