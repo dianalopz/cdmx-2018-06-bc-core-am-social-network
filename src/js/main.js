@@ -36,3 +36,4 @@ btnLoginFB.addEventListener('click', e => {
 btnSignUpFB.addEventListener('click', e => {
   window.petips.loginWithFacebook();
 });
+

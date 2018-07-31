@@ -52,7 +52,24 @@ let publicar = function() {
 // se adjunta evento a elemento listcoments
 guardarCambios(listComents);
   comentario.value = "";
+
+firebase.database().ref("chat").push ({
+   comentario: comentario
+});
+
+
 }
+
+firebase.database().ref("chat")
+.on ("value", function(snapshot){
+
+snapshot.forEach(function(e){
+
+
+
+
+});
+});
 //Editar comentario
 let editarComentario = function() {
   //se añade el elemento de la lista de taresas a taresa completadas
