@@ -33,22 +33,12 @@
             </div>
 
             <div class="card-body">
-              <textarea id="myTextarea" class="form-control" aria-label="With textarea"></textarea> <br>
-              <button class="btn btn-primary">Publicar</button>
+              <textarea id="comentario" class="form-control my-3" aria-label="With textarea"></textarea> <br>
+              <button class="btn btn-primary" id= "publicar">Publicar</button>
             </div>
           </div>
 
-          <div class="coments">
-            <div class="card" id="coments-card">
-            </div>
-          </div>
-<!--firestore-->
-<div class = "container">
-<h1>Agregar comentario</h1>
-<input type="text" id="comentario" placeholder="nombre" class="form-control my-3">
-<button class="btn btn-info" id= "publicar">Publicar</button>
-<!--agregamos area de texto para imprimir comentario-->
-<p id="publicacion" >
+          <p id="publicacion" >
   <b></b>
 </p>
 <p id="eliminar" >
@@ -57,7 +47,6 @@
 <p id="editar" >
   <b></b>
 </p>
-<!--firestore-->
 
 
         </div>
@@ -94,7 +83,7 @@
     <!-- JS local -->
     <!--toda la funcionalidad de index se pasa comentarios.js-->
     <script type="text/javascript" src="../js/data.js"></script>
-    <script type="text/javascript" src="../js/index.js"></script>
-    <script type="text/javascript" src="comentarios.js"></script>
+   
+    <script type="text/javascript" src="../js/comentarios.js"></script>
   </body>
 </html>

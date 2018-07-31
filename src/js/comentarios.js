@@ -1,11 +1,17 @@
+
+//Cerrar sesión
+btnLogout.addEventListener('click', e => {
+  window.petips.signOut();
+});
+
 //console.log("agregado");
+//window.petips.firebase();
+//GUARDAR DATOS
 firebase.initializeApp({
   apiKey: "AIzaSyCMYGoheuYje9VphBLadCAI8zqXLA5xCME",
   authDomain: "firestore-96f43.firebaseapp.com",
    projectId: "firestore-96f43"
 });
-
-//GUARDAR DATOS
 
 publicar=document.getElementById("publicar");
 // Initialize Cloud Firestore through Firebase
