@@ -1,112 +1,71 @@
+//Agregando configuracion de firebase en js actual
+window.petips.iniciaFirebase();
 
 //Cerrar sesión
 btnLogout.addEventListener('click', e => {
   window.petips.signOut();
 });
 
-//console.log("agregado");
-//window.petips.firebase();
-//GUARDAR DATOS
-firebase.initializeApp({
-  apiKey: "AIzaSyCMYGoheuYje9VphBLadCAI8zqXLA5xCME",
-  authDomain: "firestore-96f43.firebaseapp.com",
-   projectId: "firestore-96f43"
-});
-
-publicar=document.getElementById("publicar");
 // Initialize Cloud Firestore through Firebase
-var db = firebase.firestore();
+const db = firebase.firestore();
 
-//se crea evento "publicar"
-publicar.addEventListener("click", e=>{
-//console.log("funciona");
-//se crean variables para cada elemento
-var comentario = document.getElementById("comentario").value;
-//console.log(comentario);
-//agregar documentos
-//agrega coleccion de usuarios y agrega con "add" un id automatico distito por cada uno 
-//de los documentos agregados 
-db.collection("listcoments").add({
-	//crear una variable por cada uno de los elementos
-    //first: comentario,
-    //last: "Lovelace",
-    comentario: comentario
-})
-//se crea otra coleccion "user" para el perfil de la mascota y crea un id distinto para cada documento creado
-//db.collection("user").add({
-	//crear una variable por cada uno de los elementos
-    //name: ,
-    //age : "Lovelace",
-    //born: 
-//})
-.then(function(docRef) {
-    console.log("Document written with ID: ", docRef.id);
-    //una vez que se haya guardado cada uno de los elementos del formulario el dato se genera un string vacio
-    document.getElementById("comentario").value="";
-})
-.catch(function(error) {
-    console.error("Error adding document: ", error);
+//Inicia CRUD
+//CREATE
+sendComent.addEventListener('click', e => {
+    let msj = document.getElementById('myTextarea').value;
+    if (msj != '') {
+        db.collection("comentarios").add({
+            coment: msj
+        })
+        .then(function(docRef) {
+            console.log("Document written with ID: ", docRef.id);
+        })
+        .catch(function(error) {
+            console.error("Error adding document: ", error);
+        });
+    } else {
+        alert('Agrega un comentario para empezar a interactuar con la comunidad ☺');
+    }
 });
 
-});
-
-/////////////////////LEER DOCUMENTOS
-//llama a db, llama a la coleccion, get y then cuando es exitoso
-//el for each se repite por cada documento 
-/////////CONFIGURAR EN TIEMPO REAL (CONSULTAR DATOS/OBTENER actualizaciones EN TIEMPO REAL)
-//ocupar onSnapshot, un agente de escucha, cada vez que se haga un cambio lo va a reflejar en la pagina
-var publicacion = document.getElementById("publicacion");
-//esto seria para una tabla que muestra los datos del usuario
-//var tabla = document.getElementById("tabla");
-db.collection("listcoments").onSnapshot((querySnapshot) => {
-    //limpiar o no limpiar con:
-    
-//o si es el caso tabla.innerHTML="";
-//se repite para cada uno de los documentos, para cada ciclo se crea cada dato
-    querySnapshot.forEach((doc) => {
-    	//para acceder a cada elemento de la data se pone .comentario
-        console.log(`${doc.id} => ${doc.data().comentario}`);
-        //va pintando cada dato uno abajo del otro
-        //se crea otro campo para eliminar y editar
-        //se agrega un evento onclic en cada boton
-        publicacion.innerHTML+=`<p>${doc.id}<b>${doc.data().comentario}</b></p>
-        <p><button class="btn btn-danger" onclick="eliminar('${doc.id}')">Eliminar</button</p>
-        <p><button class="btn btn-warning boton" onclick = "editar('${doc.id}')">Editar</button</p>`
-        /*esto seria para una tabla que muestra los datos del usuario
-		tabla.innerHTML+=`<tr>
-      <th scope="row">${doc.id}</th>
-      <td>${doc.data().nombre}</td>
-      <td>${doc.data().edad}</td>
-      <td>${doc.data().tipo}</td>
-    </tr>`
-    */
-
+//READ
+//crear variable de tabla
+let seccionComentarios = document.getElementById("seccionComentarios");
+//leer documentos
+db.collection("comentarios").onSnapshot((querySnapshot) => {
+  //limpiar la tabla
+  seccionComentarios.innerHTML = '';
+  querySnapshot.forEach((doc) => {
+    console.log(`${doc.id} => ${doc.data().coment}`);
+    seccionComentarios.innerHTML += `<div class="mcard card">
+                                       <div class="card-header">
+                                         <img src="../images/user.png" alt="user">
+                                         <h5 id="user">Usuario</h5>
+                                      </div>
+                                      <h6 class="coment">${doc.data().coment}</h6>
+                                      <div class="footer">
+                                        <button type="button" class="btn btn-outline-light"><img src="../images/love.png" alt="like"></button>
+                                        <button type="button" class="btn btn-outline-light" onclick="funEdit('${doc.id}','${doc.data().coment}')"><img src="../images/edit.png" alt="Edit"></button>
+                                        <button type="button" class="btn btn-outline-light" onclick="funDelete('${doc.id}')"><img src="../images/delete.png" alt="Delete"></button>
+                                    </div>
+                                  </div>`;
     });
 });
-//BORRAR DATOS(SE COPIA LA DOCUMENTACION DE CLOUD FIRESTORE )
-//creamos funcion eliminar
-const eliminar = (id) => {
-	if(confirm("¿está seguro que desea eliminar esta publicación?")){
-			db.collection("listcoments").doc(id).delete().then(function() {
-    		console.log("Document successfully deleted!");
-    		publicacion.innerHTML="";
-			}).catch(function(error) {
-   			 console.error("Error removing document: ", error);
-			});
-	}
-	//else { alert("operacion cancelada");}
-};
 
-//editar comentarios
-const editar = (id, comentario) => {
-	let boton = document.getElementsById("boton");
-	boton.innerHTML = "editar"
-console.log("hola")
-var washingtonRef = db.collection("listcoments").doc(id);
+//UPDATE
+/*const editar = (id,mje) => {
 
-// Set the "capital" field of the city 'DC'
+document.getElementById("mje").value = mje;
+let guardar = document.getElementById("guardar");
+//crear evento onclick
+guardar.onclick = function (){
+  let washingtonRef = db.collection("comentarios").doc(id);
+  //crear una variable para cada elemento que cambiara
+
+  let mje = document.getElementById("mje").value;
+  // hacer un update
 return washingtonRef.update({
-    comentario: comentario
+    coment: mje,
 })
 .then(function() {
     console.log("Document successfully updated!");
@@ -115,9 +74,20 @@ return washingtonRef.update({
     // The document probably doesn't exist.
     console.error("Error updating document: ", error);
 });
+
 }
+}*/
 
-
-
-
-
+//DELETE
+const funDelete = (comentId) => {
+  const resp = confirm("¿Estas seguro de borrar este comentario?");
+  if (resp === true) {
+    db.collection("comentarios").doc(comentId).delete().then(function() {
+        console.log("Document successfully deleted!");
+    }).catch(function(error) {
+        console.error("Error removing document: ", error);
+    });
+  } else {
+    alert('Tranquilo aun no se borra ;)');
+  }
+}

@@ -1,25 +1,55 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <title>Mi perfil</title>
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="../css/main.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Yanone+Kaffeesatz" rel="stylesheet">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<!--firestore-->
-<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
-
-    <title>Perfil de usuario</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
   </head>
+
   <body>
-    <div class="container"></div>
-    <h1>Mi perfil</h1>
-    <!--COMIENZA CONTENIDO---->
-    
-    <h1>Mi perfil</h1>
-    <input type="text" id="nombrep" placeholder="nombre del petlover" class="form-control my-3">
+    <header class="header-fixed">
+      <div class="container">
+        <div class="header-block">
+          <img id="logo-fixed" src="../images/logo.png" alt="Petips">
+          <strong id="brand">Petips</strong>
+        </div>
+        <div class="header-block" id="usuario">
+          <!-- <h4 id="userName">hola</h4>-->
+          <input id="btnLogout" type="button" class="btn btn-outline-light" value="Cerrar sesión">
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="col-9">
+          <div class="card mb-3">
+            <img class="card-img-top" src="../images/cover.png" alt="Card image cap">
+            <div class="card-body">
+              <img id="profile-picture" src="../images/user.jpg" alt="Perfil">
+              <h2 id="user" class="card-title"><strong>Usuario</strong></h2> <br><br><br>
+              <h4>Mis mascotas:</h4><br>
+              <div class="row">
+                <div class="col-4">
+                  <img id="my-pet" src="../images/pet.jpg" alt="my pet">
+                </div>
+                <div class="col-8">
+                  <h3 class="card-text">Miley</h3>
+                  <ul>
+                    <li>Perro</li>
+                    <li>Coquer Spanel</li>
+                    <li>Hembra</li>
+                    <li>3 años</li>
+                  </ul>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div><br>
+              <input type="text" id="nombrep" placeholder="nombre del petlover" class="form-control my-3">
     <input type="text" id="nombrem" placeholder="nombre de mi mascota" class="form-control">
     <input type="text" id="mascota" placeholder="tipo de mascota" class="form-control my-3">
     <input type="text" id="sexo" placeholder="sexo" class="form-control my-3">
@@ -31,12 +61,12 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Nombre del Petlover</th>
-      <th scope="col">Nombre de mi mascota</th>
-      <th scope="col">Tipo de mascota</th>
+      <th scope="col">Petlover</th>
+      <th scope="col">Mascota</th>
+      <th scope="col">Tipo</th>
       <th scope="col">Sexo</th>
       <th scope="col">Edad</th>
-      <th scope="col">Descripciòn</th>
+      <th scope="col">Descripción</th>
       <th scope="col">Eliminar</th>
       <th scope="col">Editar</th>
     </tr>
@@ -44,15 +74,66 @@
   <tbody id = "tabla">
   </tbody>
   </table>
-  </div> 
-
-    <!--TERMINA CONTENIDO ---->
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            </div>
+          </div>
+        </div>
+        <!-- Menú -->
+        <div class="col-3">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a href="Comentarios.html">
+                <img src="../images/home.png" alt="Inicio">
+                <h6 class="nav-link">Inicio</h6>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="Perfil.html">
+                <img src="../images/family.png" alt="Perfil">
+                <h6 class="nav-link">Mi perfil</h6>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="Especialista.html">
+                <img src="../images/stethoscope.png" alt="Especialista">
+                <h6 class="nav-link">Consulta un especialista</h6>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="DIY.html">
+                <img src="../images/crayon.png" alt="DIY">
+                <h6 class="nav-link">DIY</h6>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="Tienda.html">
+                <img src="../images/online-shop.png" alt="Tienda">
+                <h6 class="nav-link">Tienda</h6>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="Eventos.html">
+                <img src="../images/appointment.png" alt="Eventos">
+                <h6 class="nav-link">Proximos eventos</h6>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Optinal JQuerry, Popper, BS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="usuario.js"></script>
+
+    <!-- Conexion firebase -->
+  	<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+  	<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
+    <!-- Librerias Cloudfirestore -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+    <!-- JS local -->
+    <script type="text/javascript" src="../js/data.js"></script>
+    <script type="text/javascript" src="../js/usuario.js"></script>
   </body>
+
 </html>

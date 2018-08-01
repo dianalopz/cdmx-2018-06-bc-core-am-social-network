@@ -126,56 +126,37 @@ strong {
   margin-left: 5px;
   vertical-align: middle;
 }
-#usuario {
-  text-align: right;
+#usuario,
+.footer {
+  text-align: right !important;
 }
 #coments-card {
   margin: 15px 0;
   padding: 10px;
 }
-/* New Coment */
-label[for='new-task'] {
-  display: block;
-  margin: 0 0 20px;
+.nav-link,
+#user {
+  display: inline-block !important;
+  color: #000;
 }
-input#myTextarea {
-  float: left;
-  width: 318px;
+.nav-item {
+  padding: 5px !important;
 }
-/* Coment list */
-ul{
-  overflow: hidden;
-  padding: 20px 0;
-  border-bottom: 1px solid #eee;
+.nav-item:hover {
+  background: #84089940;
 }
-ul> input[type="checkbox"] {
-  margin: 0 10px;
-  position: relative;
-  top: 15px;
+a {
+  text-decoration: none !important;
 }
-ul> label {
-  font-size: 18px;
-  line-height: 40px;
-  width: 237px;
-  padding: 0 0 0 11px;
+.coment {
+  padding: 20px;
 }
-
-input[type="text"] {
-  width: 226px;
+.mcard {
+  margin: 20px 0;
 }
-ul.delete:hover {
-  color: #CF2323;
-}
-
-/* Edit Coment */
-input[type=text] {
-  display:none;
-}
-
-ul.editMode input[type=text] {
-  display:block;
-}
-
-ul.editMode label {
-  display:none;
+#profile-picture {
+  margin: -80px 50px 0 0;
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
 }

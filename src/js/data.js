@@ -1,6 +1,6 @@
 window.petips = {
   //Initialize Firebase
-  firebase: () => {
+  iniciaFirebase: () => {
     //Apis firebase
     var config = {
       apiKey: 'AIzaSyCf9mU0KwvA6Yz49EbBIu8LFKQqVVqZTxw',
@@ -39,7 +39,7 @@ window.petips = {
   },
 
   //Login con Google
-  loginWithGoogle: () => {
+  authenticationWithGoogle: () => {
     //Pasa a la autenticacion de firebase primero validando si ya existe un usuario
     if (!firebase.auth().currentUser) {
       const provider = new firebase.auth.GoogleAuthProvider();
@@ -54,7 +54,7 @@ window.petips = {
   },
 
   //Login con Facebook
-  loginWithFacebook: () => {
+  authenticationWithFacebook: () => {
     //Pasa a la autenticacion de firebase primero validando si ya existe un usuario
     if (!firebase.auth().currentUser) {
       const provider = new firebase.auth.FacebookAuthProvider();
@@ -78,4 +78,3 @@ window.petips = {
       .catch (e => alert(e.message));
   }
 };
-

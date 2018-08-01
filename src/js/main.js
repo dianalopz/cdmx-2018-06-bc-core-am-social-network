@@ -1,5 +1,5 @@
 //Agregando configuracion de firebase en js actual
-window.petips.firebase();
+window.petips.iniciaFirebase();
 
 //Evento registro nuevo usuario con correo y contraseña
 btnSignUp.addEventListener('click', e => {
@@ -19,21 +19,20 @@ btnLogin.addEventListener('click', e => {
 
 //Evento login con Google
 btnLoginGoogle.addEventListener('click', e => {
-  window.petips.loginWithGoogle();
+  window.petips.authenticationWithGoogle();
 });
 
 //Evento SignUp Google
 btnSignUpGoogle.addEventListener('click', e => {
-  window.petips.loginWithGoogle();
+  window.petips.authenticationWithGoogle();
 });
 
 //Evento login con Facebook
 btnLoginFB.addEventListener('click', e => {
-  window.petips.loginWithFacebook();
+  window.petips.authenticationWithFacebook();
 });
 
 //Evento SignUp Facebook
 btnSignUpFB.addEventListener('click', e => {
-  window.petips.loginWithFacebook();
+  window.petips.authenticationWithFacebook();
 });
-

@@ -10,7 +10,7 @@ const db = firebase.firestore();
 
 boton1.addEventListener("click", e => {
 //crear variable para cada elemento
-//crear variables para cada elemento 
+//crear variables para cada elemento
 let nombrep = document.getElementById("nombrep").value;
 let nombrem = document.getElementById("nombrem").value;
 let mascota = document.getElementById("mascota").value;
@@ -31,7 +31,7 @@ let boton1 = document.getElementById("boton1");
 })
 .then(function(docRef) {
     console.log("Document written with ID: ", docRef.id);
-    
+
     document.getElementById("nombrep").value = " ";
     document.getElementById("nombrem").value = " ";
 	document.getElementById("mascota").value = " ";
@@ -52,7 +52,7 @@ db.collection("users").onSnapshot((querySnapshot) => {
     	tabla.innerHTML = " ";
     	querySnapshot.forEach((doc) => {
         console.log(`${doc.id} => ${doc.data().name1}`);
-        tabla. innerHTML += ` 
+        tabla. innerHTML += `
         <tr>
       <th scope="row">${doc.id}</th>
       <th scope="col">${doc.data().name1}</th>
